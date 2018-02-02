@@ -15,7 +15,7 @@ public class quickSort extends RecursiveAction {
 	@Override
 	protected void compute() {
 		if ((end - start + 1) <= 16) {
-			insertionSort();
+			insertionSort(start, end);
 		}
 		
 		else if (start < end) {
@@ -26,6 +26,7 @@ public class quickSort extends RecursiveAction {
 	}
 	
 	public int partition(int[] A, int startIndex, int endIndex) {
+		System.out.println("Partitioning!");
 		int pivot = A[endIndex];
 		int i = startIndex - 1;
 		
@@ -44,8 +45,9 @@ public class quickSort extends RecursiveAction {
 		return (i+1);
 	}
 	
-	public void insertionSort() {
-		for(int j = 1; j < array.length; j++) {
+	public void insertionSort(int start, int end) {
+		System.out.println("Inside insertion sort!");
+		for(int j = (start + 1); j <= end; j++) {
 			for(int i = j; i > 0; i--) {
 				if(array[i] < array[i-1]) {
 					int temp = array[i-1];

@@ -9,7 +9,10 @@ public class PSort {
 	  quickSort QS = new quickSort(A, begin, (end - 1));
 	  ForkJoinPool threadPool = new ForkJoinPool();
 	  threadPool.invoke(QS);
-	  QS.printArray();
+	  QS.printArray();	  
+	  
+//	  QS myQS = new QS(A, begin, (end - 1));
+//	  myQS.run();
   }
 }
 
