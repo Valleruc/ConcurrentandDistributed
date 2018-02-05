@@ -62,15 +62,6 @@ public class quickSort extends RecursiveAction {
 	public int[] getSortedArray() {
 		return array;
 	}
-	
-	/*
-	 * For testing purposes
-	 */
-	public void printArray() {
-		for(int i = 0; i < array.length; i++)
-			System.out.println(array[i]);
-		System.out.println(" ");
-	}
 }
 
 
